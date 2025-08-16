@@ -22,8 +22,7 @@
 
 body {
     background: var(--primary-color);
-    font-family:'Inter', Tahoma, Geneva, Verdana, sans-serif;
-
+    font-family:'Inter', Tahoma, Geneva, Verdana, sans-serif
 }
 
 a {
@@ -54,12 +53,21 @@ i {
 }
 
 .menu {
+    width: 100vw;
+    position: fixed;
+    bottom: 0;
     display: flex;
     align-items: center;
+    background: bar(--primary-bg-color);
+}
+
+.menu__item{
+    width: 100%;
 }
 
 .menu--mobile {
     justify-content: space-between;
+    border-top: 1px solid var(--border-color);
 }
 
 .menu--mobile .menu__link {
@@ -67,6 +75,15 @@ i {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap: .5rem;
+    padding: 0.5rem 1rem;
+}
+
+.menu__link.active .menu__icon,
+.menu__link.active .menu__text {
+    color: var(--primary-bg-color);
+    font-weight: 600;
+
 }
 
 .menu__icon, .menu__text {
