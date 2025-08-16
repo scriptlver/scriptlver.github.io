@@ -110,7 +110,7 @@ i {
 }
 
 @media (min-width: 768px) {
-    .menu--mobile {
+    .nav--mobile {
         display: none;
     }
 
