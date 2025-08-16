@@ -5,6 +5,7 @@
     --border-color: #bdc3c7;
 
     --title-color: #2c3e50;
+    --text-color: #34495e;
     --link-color: #2980b9;
     --icon-color: #ffffff;
 }
@@ -19,6 +20,10 @@
 
 body {
     background: var(--primary-color);
+}
+
+a {
+    text-decoration: none;
 }
 
 i {
@@ -42,5 +47,33 @@ i {
 #toggleTheme {
     font-size: 1.5rem;
     color: var(--icon-color);
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+}
+
+.menu--mobile {
+    justify-content: space-between;
+}
+
+.menu--mobile .menu__link {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu__icon, .menu__text {
+    color: var(--text-color);
+}
+
+.menu__icon {
+    font-size: 1.5rem;
+}
+
+.menu__text {
+    font-size: .75rem;
 }
 
