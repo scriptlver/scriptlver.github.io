@@ -99,3 +99,11 @@ i {
     text-transform: uppercase;
 }
 
+@media (min-width: 768px) {
+    .menu--mobile {
+        display: none;
+    }
+
+
+}
+
