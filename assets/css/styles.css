@@ -99,6 +99,11 @@ i {
     text-transform: uppercase;
 }
 
+.header__nav {
+    display: none;
+
+}
+
 .menu--principal {
     gap: 1rem;
 
@@ -107,6 +112,10 @@ i {
 @media (min-width: 768px) {
     .menu--mobile {
         display: none;
+    }
+
+    .header__nav {
+        display: flex;
     }
 }
 
