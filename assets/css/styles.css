@@ -24,3 +24,23 @@ body {
 i {
     color: var(--icon-color);
 }
+
+.header {
+    display: flex;
+    flex-flow: row warp;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0.5rem 1rem;
+}
+
+.header__brand.brand__logo {
+    width: 3.25rem;
+    height: 3.25rem;
+}
+
+#toggleTheme {
+    font-size: 1.5rem;
+    color: var(--icon-color);
+}
+
