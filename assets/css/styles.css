@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
 :root {
     --primary-color: #000000; /* mudar essas cores aq tb*/
     --primary-bg-color: #ecf0f1;
@@ -20,6 +22,8 @@
 
 body {
     background: var(--primary-color);
+    font-family:'Inter', Tahoma, Geneva, Verdana, sans-serif;
+
 }
 
 a {
@@ -75,5 +79,6 @@ i {
 
 .menu__text {
     font-size: .75rem;
+    text-transform: uppercase;
 }
 
