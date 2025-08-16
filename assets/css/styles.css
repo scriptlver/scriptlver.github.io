@@ -1,0 +1,26 @@
+:root {
+    --primary-color: #000000; /* mudar essas cores aq tb*/
+    --primary-bg-color: #ecf0f1;
+    --secondary-color: #2ecc71;
+    --border-color: #bdc3c7;
+
+    --title-color: #2c3e50;
+    --link-color: #2980b9;
+    --icon-color: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    vertical-align: baseline;
+    list-style: none;
+}
+
+body {
+    background: var(--primary-color);
+}
+
+i {
+    color: var(--icon-color);
+}
