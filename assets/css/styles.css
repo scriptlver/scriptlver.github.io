@@ -2,12 +2,12 @@
 
 :root {
     --primary-color: #000000; /* mudar essas cores aq tb*/
-    --primary-bg-color: #ecf0f1;
-    --secondary-color: #2ecc71;
-    --border-color: #bdc3c7;
+    --primary-bg-color: #ffffff;
+    --secondary-color: #b700ff;
+    --border-color: #ffffff;
 
     --title-color: #2c3e50;
-    --text-color: #34495e;
+    --text-color: #540670;
     --link-color: #2980b9;
     --icon-color: #ffffff;
 }
