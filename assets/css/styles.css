@@ -99,11 +99,14 @@ i {
     text-transform: uppercase;
 }
 
+.menu--principal {
+    gap: 1rem;
+
+}
+
 @media (min-width: 768px) {
     .menu--mobile {
         display: none;
     }
-
-
 }
 
