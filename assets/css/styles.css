@@ -66,8 +66,14 @@ i {
 }
 
 .menu--mobile {
+    display: flex;
     justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    bottom: 0; 
+    width: 100vw;
     border-top: 1px solid var(--border-color);
+    background: var(--primary-color);
 }
 
 .menu--mobile .menu__link {
@@ -106,7 +112,15 @@ i {
 
 .menu--principal {
     gap: 1rem;
+    display: flex;
 
+}
+
+.menu.menu--principal {
+    flex-direction: row;
+    gap: 2rem;
+    width: auto;
+    position: relative; 
 }
 
 @media (min-width: 768px) {
@@ -116,6 +130,17 @@ i {
 
     .header__nav {
         display: flex;
+        position: relative; 
+        justify-content: flex-start;
+        align-items: center;
+        width: auto;
+        margin-left: 1rem; 
+    }
+
+    .menu__link {
+        flex-direction: row;
+        gap: 0.5rem;
+        padding: 0.5rem 0;
     }
 
 }
