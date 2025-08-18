@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
-:root {
+:root, :root[data-theme='dark'] {
     --primary-color: #000000; /* mudar essas cores aq tb*/
     --primary-bg-color: #ffffff;
     --secondary-color: #b700ff;
@@ -18,6 +18,19 @@
     box-sizing: border-box;
     vertical-align: baseline;
     list-style: none;
+}
+
+:root[data-theme='light'] {
+    --primary-color: #ffffff; /* mudar essas cores aq tb*/
+    
+    --primary-bg-color: #ffffff;
+    --secondary-color: #C7C8C9;
+    --border-color: #C7C8C9;
+
+    --title-color: #08080F;
+    --text-color: #c17cda;
+    --link-color: #28292E;
+    --icon-color: #56575A;
 }
 
 body {
