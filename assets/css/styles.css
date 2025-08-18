@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
-:root, :root[data-theme='light'] {
-   --primary-color: #F0F0F0;
+:root {
+  --primary-color: #F0F0F0;
 
   --primary-bg-color: #111217;
   --secondary-bg-color: #28292E;
@@ -12,7 +12,32 @@
   --text-color: #9A9A9C;
   --link-color: #9A9A9C;
   --icon-color: #C7C8C9;
+}
 
+:root[data-theme='light'] {
+  --primary-color: #F0F0F0;
+
+  --primary-bg-color: #111217;
+  --secondary-bg-color: #28292E;
+  --secondary-border-color: #56575A;
+
+  --title-color: #F0F0F0;
+  --text-color: #9A9A9C;
+  --link-color: #9A9A9C;
+  --icon-color: #C7C8C9;
+}
+
+:root[data-theme='dark'] {
+  --primary-color: #0B0B0F;
+
+  --primary-bg-color: #E9E9E9;
+  --secondary-bg-color: #C7C8C9;
+  --secondary-border-color: #9A9A9C;
+
+  --title-color: #0B0B0F;
+  --text-color: #C7C8C9; 
+  --link-color: #C7C8C9;
+  --icon-color: #C7C8C9;
 }
 
 html[data-theme="light"] .brand__logo {
@@ -25,20 +50,6 @@ html[data-theme="light"] .brand__logo {
     box-sizing: border-box;
     vertical-align: baseline;
     list-style: none;
-}
-
-:root, :root[data-theme='dark'] {
-  --primary-color: #0B0B0F;
-
-	--primary-bg-color: #E9E9E9;
-	--secondary-bg-color: #C7C8C9;
-	--primary-border-color: #C7C8C9;
-	--secondary-border-color: #9A9A9C;
-
-	--title-color: #0B0B0F;
-	--text-color: #28292E;
-	--link-color: #28292E;
-	--icon-color: #56575A;
 }
 
 body {
@@ -66,7 +77,6 @@ i {
 .header__toggle {
     display: flex;
     justify-content: flex-end;
-
 }
 
 .brand__logo {
@@ -77,6 +87,8 @@ i {
 #toggleTheme {
     font-size: 1.5rem;
     color: var(--icon-color);
+    cursor: pointer;
+    transition: ease-in-out 0.3s;
 }
 
 .menu {
@@ -99,7 +111,7 @@ i {
     position: fixed;
     bottom: 0; 
     width: 100vw;
-    border-top: 1px solid var(--border-color);
+    border-top: 1px solid var(--primary-border-color);
     background: var(--primary-color);
 }
 
@@ -118,7 +130,6 @@ i {
 .menu__link:hover .menu__text {
     color: var(--primary-bg-color);
     font-weight: 600;
-
 }
 
 .menu__icon, .menu__text {
@@ -136,13 +147,11 @@ i {
 
 .header__nav {
     display: none;
-
 }
 
 .menu--principal {
     gap: 1rem;
     display: flex;
-
 }
 
 .menu.menu--principal {
@@ -155,7 +164,7 @@ i {
 @media (min-width: 768px) {
     .header {
         position: fixed;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        border-bottom: 1px solid var(--primary-border-color);
         padding: 1rem 6rem;
         background: var(--primary-color);
     }
@@ -183,7 +192,6 @@ i {
     .header__toggle {
         min-width: 30%;
     }
-
 }
 
 @media (min-width: 1400px) {
@@ -191,4 +199,3 @@ i {
         padding: 1rem 15rem;
     }
 }
-
