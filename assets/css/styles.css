@@ -1,15 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
-:root, :root[data-theme='dark'] {
-    --primary-color: #000000; /* mudar essas cores aq tb*/
-    --primary-bg-color: #ffffff;
-    --secondary-color: #b700ff;
-    --border-color: #ffffff;
+:root, :root[data-theme='light'] {
+  --primary-color: #F0F0F0;
 
-    --title-color: #2c3e50;
-    --text-color: #c17cda;
-    --link-color: #2980b9;
-    --icon-color: #ffffff;
+  --primary-bg-color: #111217;
+  --secondary-bg-color: #28292E;
+  --primary-border-color: #28292E;
+	--secondary-border-color: #56575A;
+
+  --title-color: #F0F0F0;
+  --text-color: #9A9A9C;
+  --link-color: #9A9A9C;
+  --icon-color: #C7C8C9;
 }
 
 * {
@@ -20,17 +22,18 @@
     list-style: none;
 }
 
-:root[data-theme='light'] {
-    --primary-color: #ffffff; /* mudar essas cores aq tb*/
-    
-    --primary-bg-color: #ffffff;
-    --secondary-color: #C7C8C9;
-    --border-color: #C7C8C9;
+:root[data-theme='dark'] {
+  --primary-color: #0B0B0F;
 
-    --title-color: #08080F;
-    --text-color: #c17cda;
-    --link-color: #28292E;
-    --icon-color: #56575A;
+	--primary-bg-color: #E9E9E9;
+	--secondary-bg-color: #C7C8C9;
+	--primary-border-color: #C7C8C9;
+	--secondary-border-color: #9A9A9C;
+
+	--title-color: #0B0B0F;
+	--text-color: #28292E;
+	--link-color: #28292E;
+	--icon-color: #56575A;
 }
 
 body {
