@@ -1,17 +1,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
 :root, :root[data-theme='light'] {
-  --primary-color: #F0F0F0;
+   --primary-color: #F0F0F0;
 
   --primary-bg-color: #111217;
   --secondary-bg-color: #28292E;
   --primary-border-color: #28292E;
-	--secondary-border-color: #56575A;
+  --secondary-border-color: #56575A;
 
   --title-color: #F0F0F0;
   --text-color: #9A9A9C;
   --link-color: #9A9A9C;
   --icon-color: #C7C8C9;
+
+}
+
+html[data-theme="light"] .brand__logo {
+    filter: invert(1);
 }
 
 * {
@@ -22,7 +27,7 @@
     list-style: none;
 }
 
-:root[data-theme='dark'] {
+:root, :root[data-theme='dark'] {
   --primary-color: #0B0B0F;
 
 	--primary-bg-color: #E9E9E9;
