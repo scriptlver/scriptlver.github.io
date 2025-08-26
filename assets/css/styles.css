@@ -267,8 +267,7 @@ main {
   align-items: center;
   gap: 1.25rem;
   padding: 6.25rem 1rem 2rem;
-  background: var(--secondary-bg-color);
-  margin-top: -5.5rem;
+  margin-top: -7.5rem;
 }
 
 .technologies h2 {
