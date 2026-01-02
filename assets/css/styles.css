@@ -304,7 +304,7 @@ main {
   display: flex;
   flex-direction: column;
   gap: 3rem;
-  margin-top: -5rem; /* mudar aq dps se a distancia estiver mtt perto**/
+  margin-top: -1rem; /* mudar aq dps se a distancia estiver mtt perto**/
 }
 
 .projects__container {
