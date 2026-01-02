@@ -5,5 +5,6 @@ Portfólio pessoal desenvolvido para apresentar meus projetos, habilidades e est
 🔗 Acesse aqui:  
 https://scriptlver.github.io/
 
+---
 
 Site hospedado com **GitHub Pages**.
