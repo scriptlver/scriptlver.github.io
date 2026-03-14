@@ -7,3 +7,4 @@ https://scriptlver.github.io/
 
 ---
 
+Site hospedado com **GitHub Pages**.
