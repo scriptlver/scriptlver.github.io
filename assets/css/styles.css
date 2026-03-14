@@ -280,18 +280,16 @@ main {
 .technologies__list {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: flex-start;
   gap: .5rem;
 }
 
 .technologies__item {
   display: flex;
-  flex-direction: row;
   justify-content: center;
   align-items: center;
   width: 4.8rem;
   height: 4.8rem;
-  aspect-ratio: 1/1;
   border: 1px solid var(--secondary-border-color);
   border-radius: 50rem;
 }
@@ -516,7 +514,7 @@ footer p {
   padding: 1rem;
 }
 
-/* Responsividade */
+/* responsividade */
 @media (min-width: 768px) {
   .header {
     position: fixed;
