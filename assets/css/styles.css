@@ -277,6 +277,8 @@ main {
   text-align: start;
 }
 
+
+
 .technologies__list {
   display: flex;
   flex-wrap: wrap;
@@ -314,14 +316,16 @@ main {
 .projects__card {
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 2rem;
+  border-radius: 0.9rem;
 }
 
 .card__cover {
   width: 100%;
-  border-radius: 0.5rem;
+  height: 100%;
+  border-radius: 12px;
   object-fit: cover;
-  object-position: center;
 }
 
 .card__body {
