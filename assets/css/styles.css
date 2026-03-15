@@ -518,6 +518,19 @@ footer p {
   padding: 1rem;
 }
 
+.technologies__button{
+  margin-top: 20px;
+  padding: 10px 20px;
+  border-radius: 8px;
+  border: none;
+  background: #111;
+  color: white;
+  cursor: pointer;
+}
+.technologies__more{
+  display: none;
+}
+
 /* responsividade */
 @media (min-width: 768px) {
   .header {
