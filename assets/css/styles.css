@@ -277,20 +277,21 @@ main {
   align-items: center;
   gap: 1.25rem;
   padding: 6.25rem 1rem 2rem;
-  margin-top: -7.5rem;
 }
 
 .technologies h2 {
   font-size: 2rem;
   text-transform: none;
   letter-spacing: normal;
-  text-align: start;
+  text-align: center;
+  margin-bottom: 1rem;
 }
+
 
 .technologies__list {
   display: flex;
   flex-wrap: wrap;
-  justify-content: flex-start;
+  justify-content: center;
   gap: 0.5rem;
 }
 
@@ -657,15 +658,16 @@ footer p {
     width: auto;
   }
 
-  .technologies {
-    flex-direction: row;
-    justify-content: space-between;
+   .technologies {
+    flex-direction: column;
+    align-items: center;
     padding: 10rem 6rem 4rem;
   }
 
   .technologies h2 {
     font-size: 3rem;
-    width: 55%;
+    width: 100%;
+    text-align: center;
   }
 
   .technologies__list {
