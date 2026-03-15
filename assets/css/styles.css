@@ -545,6 +545,12 @@ footer p {
 }
 
 /* responsividade */
+@media (max-width: 767px) {
+  .projects {
+    margin-top: 5rem;
+  }
+}
+
 @media (min-width: 768px) {
   .header {
     position: fixed;
