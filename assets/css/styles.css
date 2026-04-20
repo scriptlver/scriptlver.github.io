@@ -313,7 +313,8 @@ main {
   display: flex;
   flex-direction: column;
   gap: 3rem;
-  margin-top: 1px; /* mudar aq dps se a distancia estiver mtt perto**/
+  margin-top: 1px;
+  /* mudar aq dps se a distancia estiver mtt perto**/
 }
 
 .projects__container {
@@ -375,7 +376,8 @@ main {
 }
 
 .card__body .technologies__list {
-  gap: 0.75rem;
+  justify-content: flex-start;
+  width: 100%;
 }
 
 .card__body .technologies__item {
@@ -540,6 +542,7 @@ footer p {
   color: white;
   cursor: pointer;
 }
+
 .technologies__more {
   display: none;
 }
@@ -590,6 +593,7 @@ footer p {
   .contact {
     padding: 6rem;
   }
+
   .contact p {
     width: 80%;
   }
@@ -664,7 +668,7 @@ footer p {
     width: auto;
   }
 
-   .technologies {
+  .technologies {
     flex-direction: column;
     align-items: center;
     padding: 10rem 6rem 4rem;
