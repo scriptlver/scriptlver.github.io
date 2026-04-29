@@ -219,7 +219,7 @@ p {
 
 .menu--social {
   gap: 1rem;
-  flex-wrap: wrap;        
+  flex-wrap: wrap;
   justify-content: center;
 }
 
@@ -389,7 +389,7 @@ main {
 }
 
 .dropdown-menu {
-  display: none; 
+  display: none;
   position: absolute;
   top: 110%;
   left: 0;
@@ -690,47 +690,47 @@ footer p {
     text-align: left;
   }
 
-.description__buttons {
-  display: flex;
-  gap: 12px;
-  justify-content: flex-start;
-  align-items: center;
-  flex-wrap: wrap;
-}
+  .description__buttons {
+    display: flex;
+    gap: 12px;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+  }
 
-.dropdown {
-  position: relative;
-}
+  .dropdown {
+    position: relative;
+  }
 
-.dropdown-btn {
-  cursor: pointer;
-  font: inherit;
-}
+  .dropdown-btn {
+    cursor: pointer;
+    font: inherit;
+  }
 
-.dropdown-menu {
-  display: none;
-  position: absolute;
-  top: 110%;
-  left: 0;
-  background: #111;
-  border: 1px solid #333;
-  border-radius: 10px;
-  min-width: 140px;
-  overflow: hidden;
-  z-index: 1000;
-}
+  .dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 110%;
+    left: 0;
+    background: #111;
+    border: 1px solid #333;
+    border-radius: 10px;
+    min-width: 140px;
+    overflow: hidden;
+    z-index: 1000;
+  }
 
-.dropdown-menu a {
-  display: block;
-  padding: 10px;
-  color: white;
-  text-decoration: none;
-  font: inherit;
-}
+  .dropdown-menu a {
+    display: block;
+    padding: 10px;
+    color: white;
+    text-decoration: none;
+    font: inherit;
+  }
 
-.dropdown-menu a:hover {
-  background: #222;
-}
+  .dropdown-menu a:hover {
+    background: #222;
+  }
 
 }
 
