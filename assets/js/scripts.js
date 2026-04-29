@@ -294,4 +294,19 @@ if (toggleLang) {
     setTimeout(() => { toggleLang.style.opacity = "1"; }, 200);
     applyTranslation();
   });
+
+  const dropdownBtn = document.querySelector(".dropdown-btn");
+const dropdownMenu = document.querySelector(".dropdown-menu");
+
+if (dropdownBtn && dropdownMenu) {
+  dropdownBtn.addEventListener("click", () => {
+    dropdownMenu.classList.toggle("active");
+  });
+
+  document.addEventListener("click", (e) => {
+    if (!dropdownBtn.contains(e.target) && !dropdownMenu.contains(e.target)) {
+      dropdownMenu.classList.remove("active");
+    }
+  });
+}
 }
