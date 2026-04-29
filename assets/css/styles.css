@@ -378,6 +378,39 @@ main {
   justify-content: center;
 }
 
+/* --- CÓDIGO DO DROPDOWN (FORA DOS MEDIAS) --- */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-btn {
+  cursor: pointer;
+  font: inherit;
+}
+
+.dropdown-menu {
+  display: none; 
+  position: absolute;
+  top: 110%;
+  left: 0;
+  background: #111;
+  border: 1px solid #333;
+  border-radius: 10px;
+  min-width: 140px;
+  z-index: 1000;
+}
+
+.dropdown-menu.active {
+  display: block;
+}
+
+.dropdown-menu a {
+  display: block;
+  padding: 10px;
+  color: white;
+  text-decoration: none;
+}
+
 .card__buttons .btn {
   padding: 0.65rem 1.25rem;
 }
@@ -671,10 +704,7 @@ footer p {
 
 .dropdown-btn {
   cursor: pointer;
-  font: inherit;          /* mesma fonte */
-  font-family: inherit;   /* herda a fonte do botão principal */
-  font-size: inherit;
-  font-weight: inherit;
+  font: inherit;
 }
 
 .dropdown-menu {
@@ -693,21 +723,15 @@ footer p {
 .dropdown-menu a {
   display: block;
   padding: 10px;
-  text-decoration: none;
   color: white;
-  font: inherit;          
-  font-family: inherit;
-  font-size: inherit;
-  font-weight: inherit;
+  text-decoration: none;
+  font: inherit;
 }
 
 .dropdown-menu a:hover {
   background: #222;
 }
 
-.dropdown:hover .dropdown-menu {
-  display: block;
-}
 }
 
 @media (min-width: 1200px) {
