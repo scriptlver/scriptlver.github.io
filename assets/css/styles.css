@@ -135,6 +135,8 @@ p {
 .header__toggle {
   display: flex;
   justify-content: flex-end;
+  align-items: center;
+  gap: 1.45rem;
 }
 
 .header__brand .brand__logo {
@@ -143,6 +145,13 @@ p {
 }
 
 #toggleTheme {
+  font-size: 1.5rem;
+  color: var(--primary-color);
+  cursor: pointer;
+  transition: ease-in-out 0.4s;
+}
+
+#toggleLang {
   font-size: 1.5rem;
   color: var(--primary-color);
   cursor: pointer;
@@ -210,6 +219,8 @@ p {
 
 .menu--social {
   gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .btn {
