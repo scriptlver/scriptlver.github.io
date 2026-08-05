@@ -731,6 +731,12 @@ footer p {
     background: #222;
   }
 
+  .about__photo {
+    width: 100%;
+    max-width: 450px;
+    height: auto;
+  }
+
 }
 
 @media (min-width: 1200px) {
@@ -788,13 +794,6 @@ footer p {
 }
 
 @media (min-width: 1400px) {
-
-  .technologies,
-  .projects,
-  .about {
-    padding: 10rem 15rem 4rem;
-
-  }
 
   .header {
     padding: 1rem 8rem;

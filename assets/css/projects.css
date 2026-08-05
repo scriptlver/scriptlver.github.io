@@ -108,10 +108,9 @@ body {
 }
 
 .tech-icons {
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: .7rem;
+    display: grid;
+    grid-template-columns: repeat(5, min-content);
+    gap: .6rem;
     margin-top: .5rem;
     min-height: 50px;
 }
@@ -173,13 +172,13 @@ body {
 }
 
 footer {
-  margin-bottom: 4px;
-  border-top: 1px solid var(--primary-border-color);
+    margin-bottom: 4px;
+    border-top: 1px solid var(--primary-border-color);
 }
 
 footer p {
-  font-size: 0.875rem;
-  text-align: center;
+    font-size: 0.875rem;
+    text-align: center;
 }
 
 

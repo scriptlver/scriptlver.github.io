@@ -2,28 +2,35 @@ const toggleTheme = document.getElementById("toggleTheme");
 const rootHtml = document.documentElement;
 const accordionHeaders = document.querySelectorAll(".accordion__header");
 const menuLinks = document.querySelectorAll(".menu__link");
+const toggleLang = document.getElementById("toggleLang");
+
+let currentLang = "pt";
 
 function changeTheme() {
   const currentTheme = rootHtml.getAttribute("data-theme");
 
-  currentTheme === "dark"
-    ? rootHtml.setAttribute("data-theme", "light")
-    : rootHtml.setAttribute("data-theme", "dark");
+  if (currentTheme === "dark") {
+    rootHtml.setAttribute("data-theme", "light");
+  } else {
+    rootHtml.setAttribute("data-theme", "dark");
+  }
 
-  toggleTheme.classList.toggle("bi-sun");
-  toggleTheme.classList.toggle("bi-moon-stars");
+  if (toggleTheme) {
+    toggleTheme.classList.toggle("bi-sun");
+    toggleTheme.classList.toggle("bi-moon-stars");
+  }
 }
 
-toggleTheme.addEventListener("click", changeTheme);
+if (toggleTheme) {
+  toggleTheme.addEventListener("click", changeTheme);
+}
 
 accordionHeaders.forEach((header) => {
   header.addEventListener("click", () => {
     const accordionItem = header.parentElement;
-    const accordionActive = accordionItem.classList.contains("active");
-
-    accordionActive
-      ? accordionItem.classList.remove("active")
-      : accordionItem.classList.add("active");
+    if (accordionItem) {
+      accordionItem.classList.toggle("active");
+    }
   });
 });
 
@@ -34,16 +41,23 @@ menuLinks.forEach((item) => {
   });
 });
 
-const toggleLang = document.getElementById("toggleLang");
-let currentLang = "pt";
-
 const en = {
+  "nav-Home": "Home",
+  "nav-Projetos": "Projects",
+  "nav-Sobre": "About",
+  "nav-Contato": "Contact",
+
   "hero-title": "<b>Creative Solutions &</b> Full Stack Development",
   "hero-sub":
     "Lavinia Ribeiro, Campina Grande - PB, Full-Stack Developer & Cloud Architect",
   "hero-btn": "View Projects",
   "tech-title": "Knowledge in the main market technologies",
   "projects-h2": "Projects",
+
+  "page-projects-title": "Projects",
+  "page-projects-desc":
+    "Some of the projects I developed during my academic and professional journey, covering various technologies and development approaches.",
+
   "less-desc":
     "LessStress is a project aimed at offering accessible and welcoming psychological support, connecting patients and psychology professionals in a safe and intuitive digital environment.",
   "less-li-0": "User login and authentication;",
@@ -51,36 +65,45 @@ const en = {
   "less-li-2": "Online appointment scheduling;",
   "less-li-3": "Appointment history and notes;",
   "less-li-4": "Interface adapted for desktop and mobile.",
+
   "locket-desc":
-    "Locket is a web application inspired by Madison Beer's Locket album.",
+    "A website inspired by Madison Beer's album Locket, designed to offer an immersive, fluid, and modern experience, connecting users to the album in a fully personalized way.",
   "locket-li-0": "Authentication with user registration and login;",
   "locket-li-1": "Profile editing with bio and custom photo;",
   "locket-li-2": "Favorite songs management per user;",
   "locket-li-3": "API integration for data consumption and submission;",
   "locket-li-4": "Responsive interface inspired by the album.",
+
   "ohtroca-desc":
-    "OhTroca is an app created to facilitate McDonald's toy trading. It offers users a practical, interactive and fun way to complete their collections.",
+    "OhTroca is an app created to facilitate McDonald's toy trading, connecting users in a practical, interactive, and fun way to complete their collections easily.",
   "ohtroca-li-0": "Fictional brand for toy collectors;",
   "ohtroca-li-1": "Personal collection registration and management;",
   "ohtroca-li-2": "Intuitive interface to facilitate trades between users;",
   "ohtroca-li-3": "Chat for direct negotiation between users;",
   "ohtroca-li-4": "User rating system.",
+
   "skyerate-desc":
-    "Full stack platform for media reviews such as movies, books, series, music and anime.",
+    "Full Stack platform for rating movies, books, series, music, games, and anime, offering authentication and a rating system to share reviews and discover new content.",
   "skyerate-li-0": "Registration and login with JWT authentication;",
   "skyerate-li-1": "CRUD for different types of media;",
   "skyerate-li-2": "Rating and favorites system;",
   "skyerate-li-3": "Personalized profiles and followers;",
   "skyerate-li-4": "GraphQL API integrated with React.",
+
+  "mochiplush-desc":
+    "MochiPlush is a fictional plush toy store created to offer a modern, intuitive, and enjoyable experience, featuring a responsive interface that provides simple, fluid, and accessible navigation.",
+
   "btn-previa": "Preview",
   "btn-repo": "Repository",
   "btn-ver-todos": "View All Projects",
+
   "about-h2": "About me",
   "about-p":
     "I'm Lavinia Ribeiro. My interest started early, but it was in high school that I truly dove into the world of technology, exploring web development and design with tools like After Effects and Photoshop. I'm currently studying Information Systems at Unifacisa and seek to combine creativity and logic in technology projects.",
   "about-lang": "English: Intermediate",
   "btn-conectar": "Connect with Me",
   "btn-curriculo": "RESUME",
+
   "formacao-h3": "Education",
   "formacao-h4": "Information Systems",
   "formacao-data": "Feb 2024 - Present",
@@ -97,6 +120,7 @@ const en = {
   "exp-li-2": "Working with networking, security and cloud best practices;",
   "exp-li-3": "Cost and performance optimization;",
   "exp-li-4": "Technical documentation preparation.",
+
   "cert-h3": "Certifications",
   "acc-0":
     "Galactic Problem Solver - Nasa International Space Apps Challenge 2024",
@@ -108,13 +132,11 @@ const en = {
   "acc-6": "Information Technology Security",
   "acc-7": "Fundamentals of Intelligent Sensing Platforms for Industry",
   "acc-8": "Career Essentials in Cybersecurity by Microsoft and LinkedIn",
+
   "contact-h2": "Contact",
   "contact-p":
     "I'm available for services and new connections. Contact me via email and connect with me through my social networks.",
   footer: "© 2026 Lavinia Ribeiro. All rights reserved.",
-  "nav-Projetos": "Projects",
-  "nav-Sobre": "About",
-  "nav-Contato": "Contact",
 };
 
 const pt = {};
@@ -122,6 +144,7 @@ const pt = {};
 function q(sel) {
   return document.querySelector(sel);
 }
+
 function qAll(sel) {
   return document.querySelectorAll(sel);
 }
@@ -141,33 +164,51 @@ function set(el, key, html = false) {
 
 function initTranslation() {
   qAll(".menu__text").forEach((el) => {
-    pt["nav-" + el.textContent.trim()] = el.textContent.trim();
+    const text = el.textContent.trim();
+    pt["nav-" + text] = text;
   });
 
   save("hero-title", q(".main__content1 h1"), true);
   save("hero-sub", q(".main__content1 > p"));
   save("hero-btn", q(".main__content1 .btn span"));
-
   save("tech-title", q(".technologies h2"));
-
   save("projects-h2", q(".projects > h2"));
 
-  const cards = {
+  save("page-projects-title", q(".projects-header h1"));
+  save("page-projects-desc", q(".projects-header p"));
+
+  const indexCards = {
     less: q("#card-less-stress"),
     locket: q("#card-locket"),
     ohtroca: q("#card-ohtroca"),
     skyerate: q("#card-skyerate"),
   };
-  Object.entries(cards).forEach(([prefix, card]) => {
+  Object.entries(indexCards).forEach(([prefix, card]) => {
     if (!card) return;
     save(prefix + "-desc", card.querySelector(".card__description"));
     card
       .querySelectorAll(".card__item")
       .forEach((li, i) => save(prefix + "-li-" + i, li));
-    const btns = card.querySelectorAll(".card__buttons .btn span");
-    if (btns[0]) save("btn-previa", btns[0]);
-    if (btns[1]) save("btn-repo", btns[1]);
   });
+
+  const projectArticles = qAll(".project-card");
+  projectArticles.forEach((card) => {
+    const titleEl = card.querySelector("h2");
+    const descEl = card.querySelector("p");
+    if (!titleEl || !descEl) return;
+
+    const titleText = titleEl.textContent.trim().toLowerCase();
+    if (titleText.includes("less")) save("less-desc", descEl);
+    else if (titleText.includes("locket")) save("locket-desc", descEl);
+    else if (titleText.includes("ohtroca")) save("ohtroca-desc", descEl);
+    else if (titleText.includes("skyerate")) save("skyerate-desc", descEl);
+    else if (titleText.includes("mochi")) save("mochiplush-desc", descEl);
+  });
+
+  const btnsPrevia = qAll(
+    ".card__buttons .btn span, .project-buttons .btn--primary",
+  );
+  if (btnsPrevia.length > 0) save("btn-previa", btnsPrevia[0]);
 
   save("btn-ver-todos", q(".projects > a .btn span"));
 
@@ -212,7 +253,6 @@ function initTranslation() {
 
   save("contact-h2", q(".contact h2"));
   save("contact-p", q(".contact > p"));
-
   save("footer", q("footer p"));
 }
 
@@ -228,7 +268,7 @@ function applyTranslation() {
         const ptKey = Object.keys(en).find(
           (k) => k.startsWith("nav-") && en[k] === cur,
         );
-        if (ptKey) el.textContent = pt[ptKey];
+        if (ptKey && pt[ptKey]) el.textContent = pt[ptKey];
       }
     }
   });
@@ -236,26 +276,63 @@ function applyTranslation() {
   set(q(".main__content1 h1"), "hero-title", true);
   set(q(".main__content1 > p"), "hero-sub");
   set(q(".main__content1 .btn span"), "hero-btn");
-
   set(q(".technologies h2"), "tech-title");
-
   set(q(".projects > h2"), "projects-h2");
 
-  const cards = {
+  set(q(".projects-header h1"), "page-projects-title");
+  set(q(".projects-header p"), "page-projects-desc");
+
+  const indexCards = {
     less: q("#card-less-stress"),
     locket: q("#card-locket"),
     ohtroca: q("#card-ohtroca"),
     skyerate: q("#card-skyerate"),
   };
-  Object.entries(cards).forEach(([prefix, card]) => {
+  Object.entries(indexCards).forEach(([prefix, card]) => {
     if (!card) return;
     set(card.querySelector(".card__description"), prefix + "-desc");
     card
       .querySelectorAll(".card__item")
       .forEach((li, i) => set(li, prefix + "-li-" + i));
-    const btns = card.querySelectorAll(".card__buttons .btn span");
-    if (btns[0]) set(btns[0], "btn-previa");
-    if (btns[1]) set(btns[1], "btn-repo");
+  });
+
+  const projectArticles = qAll(".project-card");
+  projectArticles.forEach((card) => {
+    const titleEl = card.querySelector("h2");
+    const descEl = card.querySelector("p");
+    if (!titleEl || !descEl) return;
+
+    const titleText = titleEl.textContent.trim().toLowerCase();
+    if (titleText.includes("less")) set(descEl, "less-desc");
+    else if (titleText.includes("locket")) set(descEl, "locket-desc");
+    else if (titleText.includes("ohtroca")) set(descEl, "ohtroca-desc");
+    else if (titleText.includes("skyerate")) set(descEl, "skyerate-desc");
+    else if (titleText.includes("mochi")) set(descEl, "mochiplush-desc");
+
+    const previaBtn = card.querySelector(".btn--primary");
+    if (previaBtn) {
+      const icon = previaBtn.querySelector("i");
+      const textNode = Array.from(previaBtn.childNodes).find(
+        (node) => node.nodeType === Node.TEXT_NODE,
+      );
+      const translatedText =
+        currentLang === "en" ? en["btn-previa"] : pt["btn-previa"] || "Prévia";
+
+      if (textNode) {
+        textNode.textContent = translatedText + " ";
+      } else {
+        previaBtn.textContent = translatedText;
+        if (icon) previaBtn.appendChild(icon);
+      }
+    }
+
+    const repoBtn = Array.from(card.querySelectorAll(".btn")).find(
+      (b) => !b.classList.contains("btn--primary"),
+    );
+    if (repoBtn) {
+      repoBtn.textContent =
+        currentLang === "en" ? en["btn-repo"] : pt["btn-repo"] || "Repositório";
+    }
   });
 
   set(q(".projects > a .btn span"), "btn-ver-todos");
@@ -302,19 +379,21 @@ function applyTranslation() {
 
   set(q(".contact h2"), "contact-h2");
   set(q(".contact > p"), "contact-p");
-
   set(q("footer p"), "footer");
 }
 
 if (toggleLang) {
   initTranslation();
+
   toggleLang.addEventListener("click", () => {
     currentLang = currentLang === "pt" ? "en" : "pt";
     toggleLang.style.transition = "opacity 0.2s";
     toggleLang.style.opacity = "0.4";
+
     setTimeout(() => {
       toggleLang.style.opacity = "1";
     }, 200);
+
     applyTranslation();
   });
 
