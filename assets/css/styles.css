@@ -788,11 +788,19 @@ footer p {
 }
 
 @media (min-width: 1400px) {
+
+  .technologies,
+  .projects,
+  .about {
+    padding: 10rem 15rem 4rem;
+
+  }
+
   .header {
     padding: 1rem 8rem;
   }
 
-   h1 {
+  h1 {
     font-size: 6.25rem;
   }
 
