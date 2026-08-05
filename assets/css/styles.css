@@ -325,7 +325,6 @@ main {
   flex-direction: column;
   gap: 3rem;
   margin-top: 1px;
-  /* mudar aq dps se a distancia estiver mtt perto**/
 }
 
 .projects__container {
@@ -378,7 +377,6 @@ main {
   justify-content: center;
 }
 
-/* --- CÓDIGO DO DROPDOWN (FORA DOS MEDIAS) --- */
 .dropdown {
   position: relative;
 }
@@ -568,7 +566,8 @@ main {
 }
 
 footer {
-  margin-bottom: 5rem;
+  margin-bottom: 4px;
+  border-top: 1px solid var(--primary-border-color);
 }
 
 footer p {
@@ -789,7 +788,11 @@ footer p {
 }
 
 @media (min-width: 1400px) {
-  h1 {
+  .header {
+    padding: 1rem 8rem;
+  }
+
+   h1 {
     font-size: 6.25rem;
   }
 
@@ -801,17 +804,7 @@ footer p {
     font-size: 3.25rem;
   }
 
-  .header {
-    padding: 1rem 15rem;
-  }
-
   main {
-    padding: 12rem 15rem 2rem;
-  }
-
-  .technologies,
-  .projects,
-  .about {
-    padding: 10rem 15rem 4rem;
+    padding: 12rem 8rem 2rem;
   }
 }
