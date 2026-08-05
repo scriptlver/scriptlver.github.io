@@ -731,12 +731,6 @@ footer p {
     background: #222;
   }
 
-  .about__photo {
-    width: 100%;
-    max-width: 450px;
-    height: auto;
-  }
-
 }
 
 @media (min-width: 1200px) {
